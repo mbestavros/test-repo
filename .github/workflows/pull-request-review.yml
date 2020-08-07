@@ -1,0 +1,10 @@
+name: pr-review
+
+on: pull_request_review
+
+jobs:
+  run-on-pr-review:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@master

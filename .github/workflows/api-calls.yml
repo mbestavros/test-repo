@@ -1,6 +1,11 @@
 name: api-calls
 
-on: [pull_request_target, workflow_dispatch]
+on:
+    workflow_dispatch:
+    workflow_run:
+        workflows: ["pr-review"]
+        types:
+          - requested
 
 jobs:
   api-calls:
