@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+# SPDX-License-Identifier: Apache-2.0
+
+import enarxbot
+
+github = enarxbot.connect()
+repo = github.get_repo('enarxbot-test-org/test-repo')
+
+pr = repo.get_pull(4)
+
+print(pr.mergeable)
+print(pr.mergeable_state)
